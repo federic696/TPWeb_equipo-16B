@@ -1,0 +1,33 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+footer {
+    background-color: rgb(250, 250, 250);
+    color: rgb(68, 68, 68);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .footer-container p {
+        margin: 10px;
+    }

@@ -6,9 +6,18 @@
 }
 
 body {
-
 }
 
+.carrousel-cont {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.productos-cont{
+    margin-top: 1.5em;
+
+}
 footer {
     background-color: rgb(250, 250, 250);
     color: rgb(68, 68, 68);
@@ -30,4 +39,62 @@ footer {
 
     .footer-container p {
         margin: 10px;
+    }
+
+/*.card-cont{
+    display:flex;
+    flex-wrap:wrap;*/
+/*    justify-content:space-between;
+    align-items:center;*/
+/*}*/
+.card-cont {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cards se vayan a la siguiente fila si no caben en una */
+    justify-content: space-around; /* Espacio entre las cards */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    padding: 20px; /* Espaciado interno alrededor del contenedor */
+}
+
+.card {
+    width: 18rem; /* Mantener un tamaño consistente para todas las tarjetas */
+    display: flex;
+    flex-direction: column; /* Para alinear los elementos de la tarjeta en columna */
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto elegante */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Esconde cualquier desbordamiento como bordes extra de la imagen */
+    background-color: #fff; /* Color de fondo de la tarjeta */
+}
+
+    .card img {
+        width: 100%; /* La imagen ocupará todo el ancho de la tarjeta */
+        height: auto; /* Mantener la relación de aspecto de la imagen */
+    }
+
+.card-body {
+    padding: 15px; /* Espacio interno en el cuerpo de la tarjeta */
+    text-align: center; /* Centramos el texto */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 10px 0; /* Margen entre el texto */
+}
+
+.btn {
+    background-color: #007bff; /* Color del botón */
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .btn:hover {
+        background-color: #0056b3; /* Color del botón cuando se pasa el mouse por encima */
     }

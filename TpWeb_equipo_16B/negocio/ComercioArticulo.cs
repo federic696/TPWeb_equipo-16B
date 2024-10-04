@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using dominio;
 using datos;
+using System.Xml.Linq;
 namespace negocio
 {
     public class ComercioArticulo
@@ -19,16 +20,16 @@ namespace negocio
 
             try
             {
-                conexion.ConnectionString = "server = .\\SQLEXPRESS; database = CATALOGO_P3_DB; integrated security= true;";
+                conexion.ConnectionString = "server = .\\SQLEXPRESS; database = PROMOS_DB; integrated security= true;";
                 //conexion.ConnectionString = "server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "SELECT a.Codigo, a.Nombre, a.Descripcion, a.Precio, i.ImagenUrl AS imagen, a.Id FROM ARTICULOS a LEFT JOIN IMAGENES i ON a.Id = i.IdArticulo;";
                 comando.Connection = conexion;
-                
+
                 conexion.Open();
                 lector = comando.ExecuteReader();
 
-                while(lector.Read())
+                while (lector.Read())
                 {
                     Articulo aux = new Articulo();
                     aux.Id = (int)lector["Id"];
@@ -36,21 +37,21 @@ namespace negocio
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.Precio = (decimal)lector["Precio"];
-                    aux.ImagenUrl =lector["imagen"].ToString();
+                    aux.ImagenUrl = lector["imagen"].ToString();
                     //Falta Agregar Marca y Categoria
                     listaArticulos.Add(aux);
                 }
                 conexion.Close();
-                
+
                 return listaArticulos;
             }
             catch (Exception ex)
             {
 
                 throw ex;
-            
+
             }
-    
+
         }
 
         public void agregar(Articulo nArt)
@@ -116,6 +117,35 @@ namespace negocio
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+        }
+
+        public List<Articulo> listarConSP()
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearProcedimiento("listarArticulos");
+
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    if (!(datos.Lector["UrlImagen"] is DBNull))
+                        aux.ImagenUrl = (string)datos.Lector["UrlImagen"];
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }
@@ -203,7 +233,7 @@ namespace negocio
         ///FUNCIONES DE MARCAS
         public List<Marca> MarcasListar()
         {
-            List<Marca> listaMarca = new List<Marca> ();
+            List<Marca> listaMarca = new List<Marca>();
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
@@ -282,7 +312,7 @@ namespace negocio
         public void EliminarMarca(Marca Mar)
         {
             AccesoDatos Registro = new AccesoDatos();
-            
+
             try
             {
                 Registro.setearConsulta("DELETE FROM MARCAS where Id = @Id");

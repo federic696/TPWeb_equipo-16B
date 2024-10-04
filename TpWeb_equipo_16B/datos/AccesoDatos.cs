@@ -20,8 +20,8 @@ namespace datos
 
         public AccesoDatos()
         {
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=PROMOS_DB; integrated security=true");
-            //conexion = new SqlConnection("server = localhost; database = CATALOGO_P3_DB; User Id=SA;Password=Panqueque16;");
+            //conexion = new SqlConnection("server=.\\SQLEXPRESS; database=PROMOS_DB; integrated security=true");
+            conexion = new SqlConnection("server = localhost; database = PROMOS_DB; User Id=SA;Password=Panqueque16;");
             comando = new SqlCommand();
         }
 

@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4">
             <label for="validationCustom01" class="form-label">Nombre</label>
-            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" Text="></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" Text=""></asp:TextBox>
             
         </div>
         <div class="col-md-4">

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    <link href="content/Styles.css" rel="stylesheet" />
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -37,6 +37,7 @@
             <h1>Promo cyber fest</h1>
         </div>
         <div class="productos-cont">
+
             <h2>Ingresa y particima ingresando nuestro codigo para ganar los siguientes productos</h2>
             <hr />
         </div>
@@ -53,6 +54,7 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
+        
         <div class="d-md-flex justify-content-md-center" id="BotonParticipa">
             <a class="btn btn-primary" href="PromoWeb.aspx" role="button">Participa!!</a>
         </div>

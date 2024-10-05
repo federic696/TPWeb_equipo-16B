@@ -85,5 +85,10 @@ namespace negocio
             }
 
         }
+
+        public void AltaPersonaCanje()
+        {
+
+        }
     }
 }

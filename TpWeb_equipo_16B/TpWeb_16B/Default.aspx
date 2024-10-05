@@ -34,7 +34,7 @@
 
 
         <div class="TituloInicio">
-            <h1>Promo cyber fest</h1>
+            <h1 >Promo cyber fest</h1>
         </div>
         <div class="productos-cont">
 
@@ -45,7 +45,9 @@
             <asp:Repeater runat="server" ID="repCardArt">
                 <ItemTemplate>
                     <div class="card" style="width: 18rem;">
-                        <img src="<%#Eval("imagenUrl") %>" class="card-img-top" alt="...">
+                        <div class="ContenedorImagen">
+                             <img src="<%#Eval("imagenUrl") %>" class="card-img-top" alt="..." id="ImagenCarta">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>

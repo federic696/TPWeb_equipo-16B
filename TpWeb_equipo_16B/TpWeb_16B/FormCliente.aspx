@@ -57,7 +57,8 @@
         </div>
     </div>
     <div class="col-12">
-        <button class="btn btn-primary" type="submit">Participar</button>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+                
     </div>
   
     <script src="JS/JavaScript.js"></script>

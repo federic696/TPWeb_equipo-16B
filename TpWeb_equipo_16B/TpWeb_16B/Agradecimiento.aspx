@@ -3,5 +3,5 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1 class="Titulofinal">GRACIAS POR PARTICIPAR</h1>
-    <button>INICIO</button>
+    <a class="btn btn-primary" href="Default.aspx" role="button">INICIO</a>
 </asp:Content>

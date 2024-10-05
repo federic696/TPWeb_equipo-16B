@@ -71,6 +71,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="JS\JavaScript.js" />
+    <Content Include="Premios.aspx" />
     <Content Include="PromoWeb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -84,6 +85,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Premios.aspx.cs">
+      <DependentUpon>Premios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Premios.aspx.designer.cs">
+      <DependentUpon>Premios.aspx</DependentUpon>
     </Compile>
     <Compile Include="PromoWeb.aspx.cs">
       <DependentUpon>PromoWeb.aspx</DependentUpon>

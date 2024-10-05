@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="productos-cont">
-            <h2>Productos Destacados...</h2>
+            <h2>Productos Destacados...</h2> 
             <hr />
         </div>
         <div class="card-cont">

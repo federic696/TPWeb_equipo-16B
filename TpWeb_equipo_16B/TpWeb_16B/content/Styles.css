@@ -41,12 +41,13 @@ footer {
         margin: 10px;
     }
 
-/*.card-cont{
+.card-cont{
     display:flex;
-    flex-wrap:wrap;*/
-/*    justify-content:space-between;
-    align-items:center;*/
-/*}*/
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+   
+}
 .card-cont {
     display: flex;
     flex-wrap: wrap; /* Permite que las cards se vayan a la siguiente fila si no caben en una */
@@ -101,7 +102,3 @@ footer {
 
 /* INICIO */
 
-.h1{
-    align-items: center;
-    justify-content: center;
-}

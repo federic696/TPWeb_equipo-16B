@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
+
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -32,7 +32,7 @@
             </button>
         </div>
 
-   
+
         <div class="TituloInicio">
             <h1>Promo cyber fest</h1>
         </div>
@@ -53,8 +53,8 @@
                 </ItemTemplate>
             </asp:Repeater>
         </div>
-        <div>
-            <a class="btn btn-primary-center" href="#" role="button">PARTICIPA</a>
+        <div class="d-md-flex justify-content-md-center" id="BotonParticipa">
+            <a class="btn btn-primary" href="PromoWeb.aspx" role="button">Participa!!</a>
         </div>
     </main>
 </asp:Content>

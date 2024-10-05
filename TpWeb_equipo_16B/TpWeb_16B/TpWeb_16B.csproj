@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="content\Styles.css" />
     <Content Include="Default.aspx" />
+    <Content Include="FormCliente.aspx" />
     <Content Include="Global.asax" />
     <Content Include="JS\JavaScript.js" />
     <Content Include="Premios.aspx" />
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormCliente.aspx.cs">
+      <DependentUpon>FormCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormCliente.aspx.designer.cs">
+      <DependentUpon>FormCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

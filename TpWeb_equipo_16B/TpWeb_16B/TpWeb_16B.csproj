@@ -70,6 +70,7 @@
     <Content Include="content\Styles.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="PromoWeb.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +83,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PromoWeb.aspx.cs">
+      <DependentUpon>PromoWeb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PromoWeb.aspx.designer.cs">
+      <DependentUpon>PromoWeb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

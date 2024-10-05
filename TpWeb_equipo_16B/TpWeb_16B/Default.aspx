@@ -8,7 +8,7 @@
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://photos5.appleinsider.com/gallery/product_pages/113-hero.jpg" class="d-block w-100" alt="...">
+                        <img src="https://photos5.appleinsider.com/gallery/product_pages/113-hero.jpg" class="d-block w-100 "  alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="https://i.blogs.es/01e39b/img_2221/1366_2000.jpeg" class="d-block w-100" alt="...">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="productos-cont">
-            <h2>Productos...</h2>
+            <h2>Productos Destacados...</h2>
             <hr />
         </div>
         <div class="card-cont">

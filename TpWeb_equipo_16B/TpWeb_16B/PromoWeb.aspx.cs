@@ -13,6 +13,7 @@ namespace TpWeb_16B
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            TxtVacuher.Text = !IsPostBack ? "Codigo voucher..." : " ";
 
         }
 
@@ -93,6 +94,8 @@ namespace TpWeb_16B
 
             return estado;
         }
+
+    
     }
 
 

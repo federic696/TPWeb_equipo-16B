@@ -37,12 +37,13 @@ namespace TpWeb_16B
             codigoVoucher = (string)Session["codigoVoucher"];
             Vaucher voucher = new Vaucher();
             voucher.Codigo = codigoVoucher;
-            voucher.IdCliente = 1;
+            voucher.IdCliente = 1; // falta que el cliente sea dinamico
             voucher.FechaCanje = DateTime.Now;
             voucher.IdArticulo = idArticulo;
 
             ComercioVoucher comercio = new ComercioVoucher();
             comercio.voucherCanjeado(voucher);
+           
         }
     }
 }

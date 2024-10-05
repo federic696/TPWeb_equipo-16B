@@ -98,3 +98,10 @@ footer {
     .btn:hover {
         background-color: #0056b3; /* Color del botón cuando se pasa el mouse por encima */
     }
+
+/* INICIO */
+
+.TituloInicio{
+    align-items: center;
+    justify-content: center;
+}

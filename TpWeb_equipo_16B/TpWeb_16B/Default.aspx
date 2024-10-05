@@ -27,9 +27,12 @@
                 </button>
             </div>
         </div>
+        <div class="TituloInicio">
+            <h1>Promo cyber fest</h1>      
+        </div>
         <div class="productos-cont">
-            <h2>Productos Destacados...</h2> 
-            <hr />
+            <h2>Ingresa y particima ingresando nuestro codigo para ganar los siguientes productos</h2>
+            <hr/>
         </div>
         <div class="card-cont">
             <asp:Repeater runat="server" ID="repCardArt">
@@ -39,12 +42,13 @@
                         <div class="card-body">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>
-                            <p class="card-text"><%#Eval("Precio") %></p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
                         </div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+        </div>
+        <div>
+            <a class="btn btn-primary-center" href="#" role="button">PARTICIPA</a>
         </div>
     </main>
 </asp:Content>

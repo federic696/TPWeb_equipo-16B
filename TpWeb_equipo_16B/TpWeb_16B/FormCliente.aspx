@@ -9,7 +9,7 @@
     <div class="row g-3 needs-validation">
         <div class="col-md-4">
             <label for="validationCustom00" class="form-label">Dni</label>
-            <asp:TextBox ID="txtDni" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtDni" runat="server" CssClass="form-control" OnTextChanged="txtDni_TextChanged" AutoPostBack="true"></asp:TextBox>
            
         </div>
         <div class="col-md-4">
@@ -19,20 +19,20 @@
         </div>
         <div class="col-md-4">
             <label for="validationCustom02" class="form-label">Apellido</label>
-            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" Text=""></asp:TextBox>
            
         </div>
         <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">Email</label>
             <div class="input-group has-validation">
                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Text=""></asp:TextBox>
                
             </div>
         </div>
         <div class="col-md-6">
             <label for="validationCustom03" class="form-label">Direccion</label>
-            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control" Text=""></asp:TextBox>
         </div>
 
     </div>
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="col-12">
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
+        <asp:Button ID="Button1" runat="server"  Text="Button" />
                 
     </div>
   

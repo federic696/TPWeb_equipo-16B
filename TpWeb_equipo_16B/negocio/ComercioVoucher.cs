@@ -60,10 +60,7 @@ namespace negocio
             try
             {
 
-                if (string.IsNullOrEmpty(nVoucher.Codigo))
-                {
-                    throw new Exception("El código del voucher no puede estar vacío.");
-                }
+
                 datos.setearConsulta("UPDATE Vouchers SET IdCliente = @idCliente, FechaCanje = @fechaCanje, IdArticulo = @idArticulo WHERE CodigoVoucher = @codigoVoucher");
                 datos.setearParametro("@codigoVoucher", nVoucher.Codigo);
                 datos.setearParametro("@idCliente", nVoucher.IdCliente);
@@ -86,9 +83,40 @@ namespace negocio
 
         }
 
-        public void AltaPersonaCanje()
+        public Cliente buscarPorDni(string dni)
         {
+            AccesoDatos datos = new AccesoDatos();
+            Cliente cliente = new Cliente();
+            try
+            {
+                datos.setearConsulta("SELECT Nombre, Apellido, Email, Direccion, Ciudad, CP FROM Clientes WHERE Documento = @dni");
+                datos.setearParametro("@dni", dni);
 
+                datos.ejecutarLectura();
+
+                if (datos.Lector.Read())
+                {
+
+                    cliente.Nombre = datos.Lector["Nombre"].ToString();
+                    cliente.Apellido = datos.Lector["Apellido"].ToString();
+                    cliente.Email = datos.Lector["Email"].ToString();
+                    cliente.Direccion = datos.Lector["Direccion"].ToString();
+                    cliente.Ciudad = datos.Lector["Ciudad"].ToString();
+                    cliente.CodigoPostal = Convert.ToInt32(datos.Lector["CP"]);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            return cliente;
         }
     }
 }

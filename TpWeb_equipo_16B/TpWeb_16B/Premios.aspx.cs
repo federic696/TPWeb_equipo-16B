@@ -43,7 +43,7 @@ namespace TpWeb_16B
 
             ComercioVoucher comercio = new ComercioVoucher();
             comercio.voucherCanjeado(voucher);
-           
+            Response.Redirect("FormCliente.aspx");
         }
     }
 }

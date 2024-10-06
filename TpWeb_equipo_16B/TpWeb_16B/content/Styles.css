@@ -128,13 +128,15 @@ footer {
   
 }
 
-#ParrafoI {
+#ParrafoI{
     padding-top: 50px;
     padding-bottom: 80px;
     display: flex;
     justify-content: center;
-
+    align-items:center;
 }
+
+
 
 #CartasProductos{
     display:flex;
@@ -156,6 +158,3 @@ footer {
 
 /*PAGINA DE AGRADECIMIENTO*/
 
-#IdPromoWeb{
-    padding-top:50px;
-}

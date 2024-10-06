@@ -47,9 +47,8 @@
         </div>
         <div class="productos-cont" id="ParrafoI">
             <h2 class="ParrafoInicio">PARTICIPA Y INGRESA CODIGOS OCULTOS EN NUESTRA PAGINA QUE PODRAS GANAR ESTOS INCREIBLES PRODUCTOS</h2>
-            <hr />
         </div>
-
+        <hr />
         <div class="card-group" id="CartasProductos">
             <asp:Repeater runat="server" ID="repCardArt">
                 <ItemTemplate>

@@ -105,6 +105,10 @@ namespace negocio
                     cliente.Ciudad = datos.Lector["Ciudad"].ToString();
                     cliente.CodigoPostal = Convert.ToInt32(datos.Lector["CP"]);
                 }
+                else
+                {
+                    cliente = null;
+                }
 
 
             }

@@ -19,13 +19,13 @@ namespace TpWeb_16B
 
         protected void btnAceptarForm_Click(object sender, EventArgs e)
         {
-            string dni = txtDni.Text;
+            string dni = txtDni.Text.Trim();
             ComercioVoucher comercio = new ComercioVoucher();
             Cliente cliente1 = new Cliente();
             try
             {
                 Cliente cliente = comercio.buscarPorDni(dni);
-                if (cliente.Dni != dni)
+                if (cliente == null)
                 {
                     cliente1.Dni = txtDni.Text;
                     cliente1.Nombre = txtNombre.Text;
@@ -48,7 +48,7 @@ namespace TpWeb_16B
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

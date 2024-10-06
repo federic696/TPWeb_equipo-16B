@@ -67,7 +67,7 @@
         </div>
 
         <div class="d-md-flex justify-content-md-center" id="BotonParticipa">
-            <a class="btn btn-primary disabled" href="PromoWeb.aspx" role="button" id="Participalink">Participa!!</a>
+            <a class="btn btn-primary " href="PromoWeb.aspx" role="button" id="Participalink">Participa!!</a>
         </div>
 
     </main>

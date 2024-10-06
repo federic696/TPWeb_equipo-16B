@@ -11,6 +11,10 @@ body {
 #Carrusel {
 }
 
+#IdPromoWeb {
+    padding-top: 50px;
+}
+
 #CarruselImagen{
     height:650px;
 }
@@ -148,4 +152,10 @@ footer {
     padding-left: 150px;
     padding-right: 150px;
     font-size:30px;
+}
+
+/*PAGINA DE AGRADECIMIENTO*/
+
+#IdPromoWeb{
+    padding-top:50px;
 }

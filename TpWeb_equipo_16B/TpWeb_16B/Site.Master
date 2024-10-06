@@ -30,9 +30,6 @@
                                 <a class="nav-link" href="PromoWeb.aspx">Promo Web</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Agradecimiento.aspx">Promo Web</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="FormCliente.aspx">Promo Web</a>
                             </li>
                         </ul>

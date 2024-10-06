@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections.Specialized;
 
 namespace TpWeb_16B
 {
@@ -16,15 +17,51 @@ namespace TpWeb_16B
 
         }
 
+        protected void btnAceptarForm_Click(object sender, EventArgs e)
+        {
+            string dni = txtDni.Text;
+            ComercioVoucher comercio = new ComercioVoucher();
+            Cliente cliente1 = new Cliente();
+            try
+            {
+                Cliente cliente = comercio.buscarPorDni(dni);
+                if (cliente.Dni != dni)
+                {
+                    cliente1.Dni = txtDni.Text;
+                    cliente1.Nombre = txtNombre.Text;
+                    cliente1.Apellido = txtApellido.Text;
+                    cliente1.Email = txtEmail.Text;
+                    cliente1.Direccion = txtDireccion.Text;
+                    cliente1.Ciudad = txtCiudad.Text;
+                    cliente1.CodigoPostal = int.Parse(txtCodigoPostal.Text);
+                    comercio.AgregarClientes(cliente1);
+                    Response.Redirect("Agradecimiento.aspx");
+                }
+                else
+                {
+                    Response.Redirect("Agradecimiento.aspx");
+                }
+                
+
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
         protected void txtDni_TextChanged(object sender, EventArgs e)
         {
             string dni = txtDni.Text;
             ComercioVoucher comercio = new ComercioVoucher();
-
+            Cliente cliente1 = new Cliente();
             try
-            {   
+            {
                 Cliente cliente = comercio.buscarPorDni(dni);
-                if(cliente != null)
+                if (cliente != null)
                 {
                     txtNombre.Text = cliente.Nombre;
                     txtApellido.Text = cliente.Apellido;
@@ -38,9 +75,11 @@ namespace TpWeb_16B
             }
             catch (Exception ex)
             {
-
+                
                 throw ex;
             }
+           
         }
+
     }
 }

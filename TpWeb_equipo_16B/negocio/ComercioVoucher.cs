@@ -86,6 +86,7 @@ namespace negocio
         public Cliente buscarPorDni(string dni)
         {
             AccesoDatos datos = new AccesoDatos();
+
             Cliente cliente = new Cliente();
             try
             {
@@ -119,18 +120,18 @@ namespace negocio
             return cliente;
         }
 
-       public void AgregarClientes(Cliente cli)
+        public void AgregarClientes(Cliente cli)
         {
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta("INSERT into Clientes(Documento,Nombre,Apellido,Email,Direccion,Ciudad,CP)values(@Documento,@Nombre,@Apellido,@Email,@Direccion,@Ciudad,@CP)");
+                datos.setearConsulta("INSERT INTO Clientes (Documento, Nombre, Apellido, Email, Direccion, Ciudad, CP) VALUES (@Documento, @Nombre, @Apellido, @Email, @Direccion, @Ciudad, @CP)");
                 datos.setearParametro("@Documento",cli.Dni);
                 datos.setearParametro("@Nombre",cli.Nombre);
                 datos.setearParametro("@Apellido",cli.Apellido);
                 datos.setearParametro("@Email",cli.Email);
                 datos.setearParametro("@Direccion",cli.Direccion);
-                datos.setearParametro("@Cuidad",cli.Ciudad);
+                datos.setearParametro("@Ciudad", cli.Ciudad);
                 datos.setearParametro("@CP",cli.CodigoPostal);
                 datos.ejecutarAccion();
             }
@@ -143,7 +144,7 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
-           
+
         }
 
     }

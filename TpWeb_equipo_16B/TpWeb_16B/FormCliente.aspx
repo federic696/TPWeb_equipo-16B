@@ -57,9 +57,9 @@
         </div>
     </div>
     <div class="col-12">
-        <asp:Button ID="Button1" runat="server"  Text="Button" />
-                
+         <asp:Button ID="btnForm" runat="server" CssClass="btn btn-primary" Text="Aceptar" OnClick="btnAceptarForm_Click" />
     </div>
+ 
   
     <script src="JS/JavaScript.js"></script>
 </asp:Content>
